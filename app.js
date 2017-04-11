@@ -79,7 +79,9 @@ rl.on('line', (line) => {
     case 'DELETE':
       var args ={headers:{"Content-Type": "application/json"}};
 
-      client.delete('http://jsonplaceholder.typicode.com/posts/1',args, function(data, response) { "..." });
+      client.delete('http://jsonplaceholder.typicode.com/posts/1',args, function(data, response) { 
+            console.log("Data has been deleted");
+      });
       break;
   }
   rl.prompt();
